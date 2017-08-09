@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
         
     }
+    
     @IBOutlet weak var signupOrLogin: UIButton!
-
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var changeSignupModeButton: UIButton!
