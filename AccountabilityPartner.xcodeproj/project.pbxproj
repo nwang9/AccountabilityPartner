@@ -48,9 +48,9 @@
 			children = (
 				038E13CA1F3A39B000C5D854 /* Classes */,
 				038E13C91F3A38D700C5D854 /* ViewControllers */,
-				038E13C81F3A381D00C5D854 /* Frameworks */,
-				038E13B01F3A2E7B00C5D854 /* AccountabilityPartner */,
+				038E13B01F3A2E7B00C5D854 /* Views */,
 				038E13AF1F3A2E7B00C5D854 /* Products */,
+				038E13C81F3A381D00C5D854 /* Frameworks */,
 				038E13CB1F3A3A0200C5D854 /* Resources */,
 			);
 			sourceTree = "<group>";
@@ -63,12 +63,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		038E13B01F3A2E7B00C5D854 /* AccountabilityPartner */ = {
+		038E13B01F3A2E7B00C5D854 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				038E13B51F3A2E7B00C5D854 /* Main.storyboard */,
 				038E13BD1F3A2E7B00C5D854 /* LaunchScreen.storyboard */,
 			);
+			name = Views;
 			path = AccountabilityPartner;
 			sourceTree = "<group>";
 		};
