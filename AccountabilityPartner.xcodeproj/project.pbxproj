@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		038E13B21F3A2E7B00C5D854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E13B11F3A2E7B00C5D854 /* AppDelegate.swift */; };
+		031318111F3A946600436B1B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318101F3A946600436B1B /* libsqlite3.tbd */; };
+		031318141F3A94A500436B1B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318131F3A94A500436B1B /* AudioToolbox.framework */; };
+		031318161F3A94F600436B1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318151F3A94F600436B1B /* SystemConfiguration.framework */; };
+		038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B7FD51F3A924A00D59E61 /* AppDelegate.swift */; };
+		038B7FD91F3A935E00D59E61 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038B7FD81F3A935E00D59E61 /* CoreData.framework */; };
 		038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E13B31F3A2E7B00C5D854 /* ViewController.swift */; };
 		038E13B71F3A2E7B00C5D854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038E13B51F3A2E7B00C5D854 /* Main.storyboard */; };
 		038E13BA1F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 038E13B81F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld */; };
@@ -18,8 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031318101F3A946600436B1B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		031318131F3A94A500436B1B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		031318151F3A94F600436B1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		038B7FD51F3A924A00D59E61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		038B7FD81F3A935E00D59E61 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		038E13AE1F3A2E7B00C5D854 /* AccountabilityPartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountabilityPartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		038E13B11F3A2E7B00C5D854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AccountabilityPartner/AppDelegate.swift; sourceTree = "<group>"; };
 		038E13B31F3A2E7B00C5D854 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../AccountabilityPartner/ViewController.swift; sourceTree = "<group>"; };
 		038E13B61F3A2E7B00C5D854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		038E13B91F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountabilityPartner.xcdatamodel; sourceTree = "<group>"; };
@@ -35,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031318161F3A94F600436B1B /* SystemConfiguration.framework in Frameworks */,
+				031318141F3A94A500436B1B /* AudioToolbox.framework in Frameworks */,
+				031318111F3A946600436B1B /* libsqlite3.tbd in Frameworks */,
+				038B7FD91F3A935E00D59E61 /* CoreData.framework in Frameworks */,
 				038E13D31F3A3D1C00C5D854 /* Bolts.framework in Frameworks */,
 				038E13D11F3A3D1300C5D854 /* Parse.framework in Frameworks */,
 			);
@@ -49,7 +61,6 @@
 				038E13CA1F3A39B000C5D854 /* Classes */,
 				038E13C91F3A38D700C5D854 /* ViewControllers */,
 				038E13B01F3A2E7B00C5D854 /* Views */,
-				038E13AF1F3A2E7B00C5D854 /* Products */,
 				038E13C81F3A381D00C5D854 /* Frameworks */,
 				038E13CB1F3A3A0200C5D854 /* Resources */,
 			);
@@ -61,6 +72,7 @@
 				038E13AE1F3A2E7B00C5D854 /* AccountabilityPartner.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		038E13B01F3A2E7B00C5D854 /* Views */ = {
@@ -76,6 +88,10 @@
 		038E13C81F3A381D00C5D854 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				031318151F3A94F600436B1B /* SystemConfiguration.framework */,
+				031318131F3A94A500436B1B /* AudioToolbox.framework */,
+				031318101F3A946600436B1B /* libsqlite3.tbd */,
+				038B7FD81F3A935E00D59E61 /* CoreData.framework */,
 				038E13D21F3A3D1C00C5D854 /* Bolts.framework */,
 				038E13D01F3A3D1300C5D854 /* Parse.framework */,
 			);
@@ -93,7 +109,7 @@
 		038E13CA1F3A39B000C5D854 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				038E13B11F3A2E7B00C5D854 /* AppDelegate.swift */,
+				038B7FD51F3A924A00D59E61 /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -101,6 +117,7 @@
 		038E13CB1F3A3A0200C5D854 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				038E13AF1F3A2E7B00C5D854 /* Products */,
 				038E13C01F3A2E7B00C5D854 /* Info.plist */,
 				038E13B81F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld */,
 				038E13BB1F3A2E7B00C5D854 /* Assets.xcassets */,
@@ -179,8 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */,
 				038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */,
-				038E13B21F3A2E7B00C5D854 /* AppDelegate.swift in Sources */,
 				038E13BA1F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

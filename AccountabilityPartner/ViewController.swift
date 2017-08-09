@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
         
     }
+    
     @IBOutlet weak var signupOrLogin: UIButton!
-
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var changeSignupModeButton: UIButton!
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     var signupMode = false
-    //Sign Up or Log In
+      //Sign Up or Log In
     @IBAction func signupOrLogin(_ sender: Any) {
         // Empty Form Error
         if emailTextField.text == "" || passwordTextField.text == "" {
@@ -89,15 +89,14 @@ class ViewController: UIViewController {
                         self.createAlert(title: "Form Error", message: displayErrorMessage)
                     } else {
                         // Go to Homepage if credentials are valid
-                        DispatchQueue.main.async() {
-                            [unowned self] in
-                            self.performSegue(withIdentifier: "Homepage", sender: self)
-                        }
-                    }
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
+                        self.present(viewController, animated: false, completion: nil)                    }
                 })
             }
         }
+
     }
+
     
     @IBAction func changeSignupMode(_ sender: Any) {
         if signupMode {
@@ -122,7 +121,8 @@ class ViewController: UIViewController {
         // Go straight to homepage if User is logged in
         let currentUser = PFUser.current()
         if currentUser != nil {
-            performSegue(withIdentifier: "Homepage", sender: self)
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
+            self.present(viewController, animated: false, completion: nil)
         }
         
     }

@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="NRB-Ho-Xqs">
             <objects>
-                <navigationController id="rgu-be-Fyg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rgu-be-Fyg" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ggU-vc-pUb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +28,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,6 +41,9 @@
                                 <rect key="frame" x="156" y="318" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="signupOrLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATZ-Ef-LHR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls6-Uw-rlF">
                                 <rect key="frame" x="234" y="378" width="80" height="30"/>
@@ -91,7 +94,7 @@
         <!--Posts-->
         <scene sceneID="Tze-mC-W4K">
             <objects>
-                <viewController title="Posts" id="Wzy-cl-tR5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Homepage" title="Posts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wzy-cl-tR5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCY-fP-OzJ"/>
                         <viewControllerLayoutGuide type="bottom" id="N9G-fP-8DM"/>
