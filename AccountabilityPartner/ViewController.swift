@@ -90,7 +90,8 @@ class ViewController: UIViewController {
                     } else {
                         // Go to Homepage if credentials are valid
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
-                        self.present(viewController, animated: false, completion: nil)                    }
+                        self.present(viewController, animated: false, completion: nil)
+                    }
                 })
             }
         }
