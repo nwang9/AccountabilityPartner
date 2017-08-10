@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="-1041" y="-1392"/>
         </scene>
-        <!--View Controller-->
+        <!--Find a New Partner!-->
         <scene sceneID="2Hi-6k-Ct8">
             <objects>
-                <viewController storyboardIdentifier="Post" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RyS-X4-go2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newPost" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RyS-X4-go2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rdQ-tY-ddZ"/>
                         <viewControllerLayoutGuide type="bottom" id="fhk-O0-NeC"/>
@@ -162,12 +162,6 @@
                                 <rect key="frame" x="163" y="549" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a New Accountability Partner!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHD-QT-Dgq">
-                                <rect key="frame" x="56" y="89" width="263.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-Wz-Ep5">
                                 <rect key="frame" x="28" y="121" width="320" height="67"/>
                                 <constraints>
@@ -190,16 +184,13 @@
                         <constraints>
                             <constraint firstItem="uk4-PD-6W3" firstAttribute="top" secondItem="cOc-Wz-Ep5" secondAttribute="bottom" constant="54" id="2Wc-fJ-czv"/>
                             <constraint firstItem="WbG-5P-eBH" firstAttribute="centerX" secondItem="7JG-Cg-h7w" secondAttribute="centerX" id="2cM-0F-e08"/>
-                            <constraint firstItem="cHD-QT-Dgq" firstAttribute="centerX" secondItem="7JG-Cg-h7w" secondAttribute="centerX" id="3eC-WZ-l10"/>
                             <constraint firstItem="uk4-PD-6W3" firstAttribute="top" secondItem="cOc-Wz-Ep5" secondAttribute="bottom" constant="54" id="3pO-vI-XV6"/>
-                            <constraint firstItem="cOc-Wz-Ep5" firstAttribute="top" secondItem="cHD-QT-Dgq" secondAttribute="bottom" constant="11.5" id="5cg-6u-NMb"/>
                             <constraint firstItem="WbG-5P-eBH" firstAttribute="top" secondItem="iKj-Yf-lEr" secondAttribute="bottom" constant="28" id="Ajn-oE-Lu8"/>
                             <constraint firstItem="HEF-rW-L7q" firstAttribute="centerX" secondItem="7JG-Cg-h7w" secondAttribute="centerX" id="E2A-be-kvf"/>
                             <constraint firstItem="WbG-5P-eBH" firstAttribute="top" secondItem="iKj-Yf-lEr" secondAttribute="bottom" constant="28" id="PKA-kN-NkF"/>
                             <constraint firstItem="U7R-f4-4Xv" firstAttribute="centerX" secondItem="7JG-Cg-h7w" secondAttribute="centerX" id="RNI-xJ-d14"/>
                             <constraint firstItem="iKj-Yf-lEr" firstAttribute="centerX" secondItem="7JG-Cg-h7w" secondAttribute="centerX" id="Sfh-Gc-pxj"/>
                             <constraint firstItem="uk4-PD-6W3" firstAttribute="centerX" secondItem="7JG-Cg-h7w" secondAttribute="centerX" id="VTc-K4-yNP"/>
-                            <constraint firstItem="cHD-QT-Dgq" firstAttribute="centerY" secondItem="7JG-Cg-h7w" secondAttribute="centerY" constant="-234.5" id="Yfi-BA-BuB"/>
                             <constraint firstItem="HEF-rW-L7q" firstAttribute="top" secondItem="uk4-PD-6W3" secondAttribute="bottom" constant="27" id="e8k-kP-Jhy"/>
                             <constraint firstItem="fhk-O0-NeC" firstAttribute="top" secondItem="WbG-5P-eBH" secondAttribute="bottom" constant="88" id="ffE-2T-D3q"/>
                             <constraint firstItem="cOc-Wz-Ep5" firstAttribute="centerX" secondItem="7JG-Cg-h7w" secondAttribute="centerX" id="hgA-fl-ueT"/>
@@ -210,16 +201,18 @@
                             <constraint firstItem="U7R-f4-4Xv" firstAttribute="top" secondItem="HEF-rW-L7q" secondAttribute="bottom" constant="16" id="xdb-hf-P7i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="j4a-Is-qng"/>
+                    <navigationItem key="navigationItem" title="Find a New Partner!" id="j4a-Is-qng">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="6L6-Mq-eBv"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afz-BP-EqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1095.2" y="-660.71964017991013"/>
         </scene>
-        <!--Posts-->
+        <!--All Posts-->
         <scene sceneID="Tze-mC-W4K">
             <objects>
-                <viewController storyboardIdentifier="Homepage" title="Posts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wzy-cl-tR5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Homepage" title="All Posts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wzy-cl-tR5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCY-fP-OzJ"/>
                         <viewControllerLayoutGuide type="bottom" id="N9G-fP-8DM"/>
@@ -254,9 +247,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbG-1y-SSX">
-                                <rect key="frame" x="128.5" y="196" width="118" height="30"/>
+                                <rect key="frame" x="128" y="171" width="118" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="118" id="XIV-e2-1dj"/>
+                                    <constraint firstAttribute="width" constant="118" id="0cn-JJ-wwj"/>
                                 </constraints>
                                 <state key="normal" title="Submit New Post"/>
                                 <connections>
@@ -266,25 +259,88 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="N9G-fP-8DM" firstAttribute="top" secondItem="IbG-1y-SSX" secondAttribute="bottom" constant="466" id="5WH-5H-iV4"/>
                             <constraint firstItem="EkU-fC-Nyg" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="D49-Nd-Gan"/>
                             <constraint firstItem="EkU-fC-Nyg" firstAttribute="top" secondItem="sCY-fP-OzJ" secondAttribute="bottom" constant="43" id="MoJ-rV-QCG"/>
                             <constraint firstItem="Vx2-OC-mtt" firstAttribute="top" secondItem="EkU-fC-Nyg" secondAttribute="bottom" constant="7" id="R3b-X6-vwo"/>
-                            <constraint firstItem="IbG-1y-SSX" firstAttribute="top" secondItem="EkU-fC-Nyg" secondAttribute="bottom" constant="24" id="Ric-sL-T8S"/>
-                            <constraint firstItem="N9G-fP-8DM" firstAttribute="top" secondItem="IbG-1y-SSX" secondAttribute="bottom" constant="441" id="U0v-mZ-QAa"/>
                             <constraint firstItem="Vx2-OC-mtt" firstAttribute="leading" secondItem="hlt-ky-bab" secondAttribute="leading" id="Uyy-rH-gD4"/>
+                            <constraint firstItem="IbG-1y-SSX" firstAttribute="top" secondItem="sCY-fP-OzJ" secondAttribute="bottom" constant="107" id="VSo-x4-Obd"/>
                             <constraint firstItem="Vx2-OC-mtt" firstAttribute="centerY" secondItem="hlt-ky-bab" secondAttribute="centerY" constant="101.5" id="WXy-Ub-aml"/>
                             <constraint firstItem="Vx2-OC-mtt" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="pZt-cl-R6K"/>
-                            <constraint firstItem="IbG-1y-SSX" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="ueb-FU-9lf"/>
+                            <constraint firstItem="IbG-1y-SSX" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="rqr-cq-wyG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hYh-CE-kB6"/>
+                    <navigationItem key="navigationItem" title="All Posts" id="hYh-CE-kB6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="f2v-Y4-G1U"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="RyS-X4-go2" kind="show" identifier="Post" id="bmv-uZ-jLG"/>
+                        <segue destination="LMY-uE-Bjm" kind="show" id="7KP-e0-fwt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnF-Dl-izO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1866.4000000000001" y="-660.71964017991013"/>
+        </scene>
+        <!--Partner Chat-->
+        <scene sceneID="4w5-Oe-vOr">
+            <objects>
+                <viewController title="Partner Chat" id="LMY-uE-Bjm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MUJ-wL-pN1"/>
+                        <viewControllerLayoutGuide type="bottom" id="TuA-os-OWM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qmw-eN-cWv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="feo-y7-xZa" kind="show" id="TW3-Xd-pY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uo4-db-Hiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1852" y="-10"/>
+        </scene>
+        <!--Potential Partners-->
+        <scene sceneID="eSs-Ep-0ah">
+            <objects>
+                <viewController storyboardIdentifier="Partners" title="Potential Partners" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OaN-KQ-SaK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FaC-hZ-4PW"/>
+                        <viewControllerLayoutGuide type="bottom" id="GET-lZ-sCO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gqe-Hw-ixF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ee-cK-hGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1852" y="650"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="Lph-Yk-YxA">
+            <objects>
+                <viewController title="Post" id="feo-y7-xZa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Lc-Jm-erO"/>
+                        <viewControllerLayoutGuide type="bottom" id="KNw-KH-6IQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WFQ-pT-AKL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="OaN-KQ-SaK" kind="show" id="oUd-Mx-c1o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXe-jD-q6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1119" y="-10"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
