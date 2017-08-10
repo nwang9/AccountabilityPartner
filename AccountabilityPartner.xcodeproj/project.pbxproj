@@ -19,6 +19,11 @@
 		038E13BF1F3A2E7B00C5D854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038E13BD1F3A2E7B00C5D854 /* LaunchScreen.storyboard */; };
 		038E13D11F3A3D1300C5D854 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038E13D01F3A3D1300C5D854 /* Parse.framework */; };
 		038E13D31F3A3D1C00C5D854 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038E13D21F3A3D1C00C5D854 /* Bolts.framework */; };
+		03C78D661F3D187800A28CF2 /* AllPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D651F3D187800A28CF2 /* AllPostsViewController.swift */; };
+		03C78D681F3D189400A28CF2 /* PotentialPartnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D671F3D189400A28CF2 /* PotentialPartnersViewController.swift */; };
+		03C78D6A1F3D18AB00A28CF2 /* PartnerChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D691F3D18AB00A28CF2 /* PartnerChatViewController.swift */; };
+		03C78D6C1F3D18E100A28CF2 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */; };
+		03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		038E13C01F3A2E7B00C5D854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../AccountabilityPartner/Info.plist; sourceTree = "<group>"; };
 		038E13D01F3A3D1300C5D854 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		038E13D21F3A3D1C00C5D854 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		03C78D651F3D187800A28CF2 /* AllPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllPostsViewController.swift; path = ../AccountabilityPartner/AllPostsViewController.swift; sourceTree = "<group>"; };
+		03C78D671F3D189400A28CF2 /* PotentialPartnersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PotentialPartnersViewController.swift; path = ../PotentialPartnersViewController.swift; sourceTree = "<group>"; };
+		03C78D691F3D18AB00A28CF2 /* PartnerChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartnerChatViewController.swift; path = ../PartnerChatViewController.swift; sourceTree = "<group>"; };
+		03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailsViewController.swift; path = ViewControllers/PostDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,11 @@
 		038E13C91F3A38D700C5D854 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				03C78D691F3D18AB00A28CF2 /* PartnerChatViewController.swift */,
+				03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */,
+				03C78D671F3D189400A28CF2 /* PotentialPartnersViewController.swift */,
+				03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */,
+				03C78D651F3D187800A28CF2 /* AllPostsViewController.swift */,
 				038E13B31F3A2E7B00C5D854 /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -196,9 +211,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C78D661F3D187800A28CF2 /* AllPostsViewController.swift in Sources */,
+				03C78D6A1F3D18AB00A28CF2 /* PartnerChatViewController.swift in Sources */,
 				038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */,
+				03C78D6C1F3D18E100A28CF2 /* NewPostViewController.swift in Sources */,
 				038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */,
+				03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */,
 				038E13BA1F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld in Sources */,
+				03C78D681F3D189400A28CF2 /* PotentialPartnersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
