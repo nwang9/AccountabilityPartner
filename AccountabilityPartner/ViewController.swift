@@ -89,8 +89,8 @@ class ViewController: UIViewController {
                         self.createAlert(title: "Form Error", message: displayErrorMessage)
                     } else {
                         // Go to Homepage if credentials are valid
-                        _ = self.storyboard?.instantiateViewController(withIdentifier: "Homepage")
-                        self.navigationController?.pushViewController(<#T##UIViewController#>, animated: true)
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
+                        self.present(viewController, animated: false, completion: nil)
                     }
                 })
             }

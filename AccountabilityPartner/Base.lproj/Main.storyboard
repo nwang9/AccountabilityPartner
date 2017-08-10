@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="1Gz-Gh-zpR"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogIn" id="1Gz-Gh-zpR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9h-ay-8c4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1720" y="-1178"/>
+            <point key="canvasLocation" x="-1865" y="-1391"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -61,7 +61,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accountability Partner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9E5-va-xbZ">
-                                <rect key="frame" x="122.33333333333331" y="124.66666666666669" width="169.33333333333337" height="20.333333333333314"/>
+                                <rect key="frame" x="122.66666666666669" y="124.66666666666669" width="169" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -110,12 +110,12 @@
                         <outlet property="messageLabel" destination="FGe-P1-pLs" id="G0c-Fq-9Zb"/>
                         <outlet property="passwordTextField" destination="gM6-IK-LkS" id="L0y-bk-Rz8"/>
                         <outlet property="signupOrLogin" destination="g4A-mG-5EW" id="28a-ma-9b9"/>
-                        <segue destination="Wzy-cl-tR5" kind="show" id="2KZ-U4-Dbe"/>
+                        <segue destination="Wzy-cl-tR5" kind="show" identifier="Homepage" id="2KZ-U4-Dbe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="-1178"/>
+            <point key="canvasLocation" x="-1041" y="-1392"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Hi-6k-Ct8">
@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afz-BP-EqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="-352"/>
+            <point key="canvasLocation" x="-1094" y="-660"/>
         </scene>
         <!--Posts-->
         <scene sceneID="Tze-mC-W4K">
@@ -147,16 +147,60 @@
                     <view key="view" contentMode="scaleToFill" id="hlt-ky-bab">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vx2-OC-mtt">
+                                <rect key="frame" x="0.0" y="179" width="414" height="581"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7yv-55-UEE">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7yv-55-UEE" id="igu-a8-6j8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Posting Format: [Age/Gender/Time Zone] + Desired Goal.  Example: [20/M/PST] Weight Loss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkU-fC-Nyg">
+                                <rect key="frame" x="63" y="107" width="288" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="Nrs-Tk-LjU"/>
+                                    <constraint firstAttribute="height" constant="65" id="xL6-H9-KlZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbG-1y-SSX">
+                                <rect key="frame" x="148" y="196" width="118" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="XIV-e2-1dj"/>
+                                </constraints>
+                                <state key="normal" title="Submit New Post"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EkU-fC-Nyg" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="D49-Nd-Gan"/>
+                            <constraint firstItem="EkU-fC-Nyg" firstAttribute="top" secondItem="sCY-fP-OzJ" secondAttribute="bottom" constant="43" id="MoJ-rV-QCG"/>
+                            <constraint firstItem="Vx2-OC-mtt" firstAttribute="top" secondItem="EkU-fC-Nyg" secondAttribute="bottom" constant="7" id="R3b-X6-vwo"/>
+                            <constraint firstItem="IbG-1y-SSX" firstAttribute="top" secondItem="EkU-fC-Nyg" secondAttribute="bottom" constant="24" id="Ric-sL-T8S"/>
+                            <constraint firstItem="N9G-fP-8DM" firstAttribute="top" secondItem="IbG-1y-SSX" secondAttribute="bottom" constant="441" id="U0v-mZ-QAa"/>
+                            <constraint firstItem="Vx2-OC-mtt" firstAttribute="leading" secondItem="hlt-ky-bab" secondAttribute="leading" id="Uyy-rH-gD4"/>
+                            <constraint firstItem="Vx2-OC-mtt" firstAttribute="centerY" secondItem="hlt-ky-bab" secondAttribute="centerY" constant="101.5" id="WXy-Ub-aml"/>
+                            <constraint firstItem="Vx2-OC-mtt" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="pZt-cl-R6K"/>
+                            <constraint firstItem="IbG-1y-SSX" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="ueb-FU-9lf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hYh-CE-kB6"/>
                     <connections>
-                        <segue destination="RyS-X4-go2" kind="show" id="bmv-uZ-jLG"/>
+                        <segue destination="RyS-X4-go2" kind="show" identifier="Post" id="bmv-uZ-jLG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnF-Dl-izO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1720" y="-352"/>
+            <point key="canvasLocation" x="-1866.4000000000001" y="-660.71964017991013"/>
         </scene>
     </scenes>
 </document>
