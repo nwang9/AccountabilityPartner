@@ -10,54 +10,7 @@ import UIKit
 import Parse
 
 class ViewController: UIViewController {
- /*
-    //Navbar setup
-    let rightButtonItem = UIBarButtonItem.init(
-        title: "Sign Out",
-        style: .done,
-        target: self,
-        action: #selector(signOut)
-    )
-    
-    let leftButtonItem = UIBarButtonItem.init(
-        title: "My Profile",
-        style: .done,
-        target: self,
-        action: #selector(goToPartners)
-    )
-    
-    let middleButtonItem = UIBarButtonItem.init(
-        title: "Home",
-        style: .done,
-        target: self,
-        action: #selector(goHome)
-    )
-    
-    // Navbar Actions
-    func signOut() {
-        PFUser.logOut()
-        let currentUser = PFUser.current()
-        if currentUser == nil {
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as UIViewController
-            self.present(viewController, animated: false, completion: nil)
-        }
 
-    }
-    
-    func goToPartners() {
-        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "myPartners") as UIViewController
-        self.present(viewController, animated: false, completion: nil)
-
-        
-    }
-    
-    func goHome() {
-        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
-        self.present(viewController, animated: false, completion: nil)
-
-    }
-    
-  */
 
     
     //Prep for logout
@@ -66,6 +19,7 @@ class ViewController: UIViewController {
     }
     
 
+    @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var signupOrLogin: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
@@ -89,7 +43,7 @@ class ViewController: UIViewController {
     @IBAction func signupOrLogin(_ sender: Any) {
         // Empty Form Error
         if emailTextField.text == "" || passwordTextField.text == "" {
-            createAlert(title: "Form Error", message: "Please enter an email and password")
+            createAlert(title: "Form Error", message: "Please enter an email, password, and display name")
         } else {
             
             //Activity Indicator while Signing Up or Logging In
@@ -107,6 +61,8 @@ class ViewController: UIViewController {
                 let user = PFUser()
                 user.username = emailTextField.text
                 user.password = passwordTextField.text
+                user["displayName"] = displayNameTextField.text
+                
                 user.signUpInBackground(block: { (success, error) in
                     // End indicator when done signing up
                     self.activityIndicator.stopAnimating()
@@ -139,8 +95,8 @@ class ViewController: UIViewController {
                         self.createAlert(title: "Form Error", message: displayErrorMessage)
                     } else {
                         // Go to Homepage if credentials are valid
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
-                        self.present(viewController, animated: false, completion: nil)
+                        let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage")
+                        self.navigationController?.pushViewController(vc,animated: true)
                     }
                 })
             }
@@ -156,12 +112,14 @@ class ViewController: UIViewController {
             changeSignupModeButton.setTitle("Sign Up", for: [])
             messageLabel.text = "Don't have an account?"
             signupMode = false
+            displayNameTextField.isHidden = true
         } else {
             //change to signup mode
             signupOrLogin.setTitle("Sign Up", for: [])
             changeSignupModeButton.setTitle("Log In", for: [])
             messageLabel.text = "Already have an account?"
             signupMode = true
+            displayNameTextField.isHidden = false
         }
     }
     
@@ -172,8 +130,8 @@ class ViewController: UIViewController {
         // Go straight to homepage if User is logged in
         let currentUser = PFUser.current()
         if currentUser != nil {
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
-            self.present(viewController, animated: false, completion: nil)
+            let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
+            self.navigationController?.pushViewController(vc,animated: true)
         }
         
     }
