@@ -10,7 +10,12 @@ import Foundation
 import UIKit
 import Parse
 
-class AllPostsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class AllPostsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationBarDelegate  {
+    
+    @IBAction func goToNewPost(_ sender: Any) {
+        let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newPost")
+        self.navigationController?.pushViewController(vc,animated: true)
+    }
     
     //Define rows etc.
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,5 +41,9 @@ class AllPostsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         */
         return cell
+    }
+    
+    override func viewDidLoad() {
+        self.navigationItem.leftBarButtonItem = 
     }
 }

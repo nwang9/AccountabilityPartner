@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 import Parse
 
-class PostDetailsViewController: UIViewController {
+class PostDetailsViewController: UIViewController, UINavigationBarDelegate {
 }

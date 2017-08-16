@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Parse
 
-class NewPostViewController: UIViewController {
+class NewPostViewController: UIViewController, UINavigationBarDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
@@ -26,8 +26,8 @@ class NewPostViewController: UIViewController {
         myPost.saveInBackground()
         
         //Go Back to all posts
-        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
-        self.present(viewController, animated: false, completion: nil)
+        let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage")
+        self.navigationController?.pushViewController(vc,animated: true)
 
     }
     
