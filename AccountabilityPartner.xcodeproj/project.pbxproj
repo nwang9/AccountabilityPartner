@@ -111,12 +111,12 @@
 		038E13C91F3A38D700C5D854 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				038E13B31F3A2E7B00C5D854 /* ViewController.swift */,
+				03C78D651F3D187800A28CF2 /* AllPostsViewController.swift */,
 				03C78D691F3D18AB00A28CF2 /* PartnerChatViewController.swift */,
 				03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */,
 				03C78D671F3D189400A28CF2 /* PotentialPartnersViewController.swift */,
 				03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */,
-				03C78D651F3D187800A28CF2 /* AllPostsViewController.swift */,
-				038E13B31F3A2E7B00C5D854 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
