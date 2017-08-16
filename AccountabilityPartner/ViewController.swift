@@ -133,7 +133,7 @@ class ViewController: UIViewController {
             let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
             self.navigationController?.pushViewController(vc,animated: true)
         }
-        
+            displayNameTextField.isHidden = true
     }
 
 
@@ -144,6 +144,7 @@ class ViewController: UIViewController {
     
     func viewDidAppear() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+    
     }
 
 }

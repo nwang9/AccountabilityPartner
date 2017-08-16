@@ -44,6 +44,5 @@ class AllPostsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewDidLoad() {
-        self.navigationItem.leftBarButtonItem = 
     }
 }
