@@ -161,6 +161,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbG-5P-eBH">
                                 <rect key="frame" x="163" y="549" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitNewPost:" destination="RyS-X4-go2" eventType="touchUpInside" id="KIS-MQ-8fQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-Wz-Ep5">
                                 <rect key="frame" x="28" y="121" width="320" height="67"/>
@@ -204,6 +207,10 @@
                     <navigationItem key="navigationItem" title="Find a New Partner!" id="j4a-Is-qng">
                         <barButtonItem key="backBarButtonItem" title="Back" id="6L6-Mq-eBv"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="iKj-Yf-lEr" id="exk-NZ-w59"/>
+                        <outlet property="titleTextField" destination="HEF-rW-L7q" id="WU6-su-w7W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afz-BP-EqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +232,7 @@
                                 <rect key="frame" x="0.0" y="179" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7yv-55-UEE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" id="7yv-55-UEE">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7yv-55-UEE" id="igu-a8-6j8">
@@ -235,7 +242,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkU-fC-Nyg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkU-fC-Nyg">
                                 <rect key="frame" x="43.5" y="107" width="288" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="Nrs-Tk-LjU"/>
@@ -253,6 +260,7 @@
                                 </constraints>
                                 <state key="normal" title="Submit New Post"/>
                                 <connections>
+                                    <action selector="newPost:" destination="Wzy-cl-tR5" eventType="touchUpInside" id="CQa-32-VfC"/>
                                     <segue destination="RyS-X4-go2" kind="show" id="WrO-sN-GvZ"/>
                                 </connections>
                             </button>
@@ -344,6 +352,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bmv-uZ-jLG"/>
+        <segue reference="WrO-sN-GvZ"/>
     </inferredMetricsTieBreakers>
 </document>

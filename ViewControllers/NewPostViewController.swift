@@ -11,4 +11,19 @@ import UIKit
 import Parse
 
 class NewPostViewController: UIViewController {
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextView!
+    
+    @IBAction func submitNewPost(_ sender: Any) {
+        let currentUser = PFUser.current()
+        let myPost = PFObject(className:"Post")
+        myPost["title"] = titleTextField.text
+        myPost["description"] = descriptionTextField.text
+        myPost["parent"] = currentUser
+        
+        // save Post
+        myPost.saveInBackground()
+    }
+    
 }
