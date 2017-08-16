@@ -260,7 +260,6 @@
                                 </constraints>
                                 <state key="normal" title="Submit New Post"/>
                                 <connections>
-                                    <action selector="newPost:" destination="Wzy-cl-tR5" eventType="touchUpInside" id="CQa-32-VfC"/>
                                     <segue destination="RyS-X4-go2" kind="show" id="WrO-sN-GvZ"/>
                                 </connections>
                             </button>
@@ -314,7 +313,7 @@
         <!--Potential Partners-->
         <scene sceneID="eSs-Ep-0ah">
             <objects>
-                <viewController storyboardIdentifier="Partners" title="Potential Partners" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OaN-KQ-SaK" customClass="PotentialPartnersViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myPartners" title="Potential Partners" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OaN-KQ-SaK" customClass="PotentialPartnersViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FaC-hZ-4PW"/>
                         <viewControllerLayoutGuide type="bottom" id="GET-lZ-sCO"/>

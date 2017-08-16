@@ -24,6 +24,11 @@ class NewPostViewController: UIViewController {
         
         // save Post
         myPost.saveInBackground()
+        
+        //Go Back to all posts
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
+        self.present(viewController, animated: false, completion: nil)
+
     }
     
 }

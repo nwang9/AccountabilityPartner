@@ -11,11 +11,61 @@ import Parse
 
 class ViewController: UIViewController {
     
+    //Navbar setup
+    let rightButtonItem = UIBarButtonItem.init(
+        title: "Sign Out",
+        style: .done,
+        target: self,
+        action: #selector(signOut)
+    )
+    
+    let leftButtonItem = UIBarButtonItem.init(
+        title: "My Profile",
+        style: .done,
+        target: self,
+        action: #selector(goToPartners)
+    )
+    
+    let middleButtonItem = UIBarButtonItem.init(
+        title: "Home",
+        style: .done,
+        target: self,
+        action: #selector(goHome)
+    )
+    
+    // Navbar Actions
+    func signOut() {
+        PFUser.logOut()
+        let currentUser = PFUser.current()
+        if currentUser == nil {
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as UIViewController
+            self.present(viewController, animated: false, completion: nil)
+        }
+
+    }
+    
+    func goToPartners() {
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "myPartners") as UIViewController
+        self.present(viewController, animated: false, completion: nil)
+
+        
+    }
+    
+    func goHome() {
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Homepage") as UIViewController
+        self.present(viewController, animated: false, completion: nil)
+
+    }
+    
+  
+
+    
     //Prep for logout
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
         
     }
     
+
     @IBOutlet weak var signupOrLogin: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
@@ -133,7 +183,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func viewDidAppear() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
 }
 
