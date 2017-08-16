@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rgO-aX-7YH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogIn" id="1Gz-Gh-zpR"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6ig-87-Wiu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9h-ay-8c4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,7 +110,7 @@
                         <outlet property="messageLabel" destination="FGe-P1-pLs" id="G0c-Fq-9Zb"/>
                         <outlet property="passwordTextField" destination="gM6-IK-LkS" id="L0y-bk-Rz8"/>
                         <outlet property="signupOrLogin" destination="g4A-mG-5EW" id="28a-ma-9b9"/>
-                        <segue destination="Wzy-cl-tR5" kind="show" identifier="Homepage" id="2KZ-U4-Dbe"/>
+                        <segue destination="Wzy-cl-tR5" kind="show" id="wXi-Hq-vC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -210,6 +210,7 @@
                     <connections>
                         <outlet property="descriptionTextField" destination="iKj-Yf-lEr" id="exk-NZ-w59"/>
                         <outlet property="titleTextField" destination="HEF-rW-L7q" id="WU6-su-w7W"/>
+                        <segue destination="feo-y7-xZa" kind="show" id="Fqm-04-g70"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afz-BP-EqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,9 +260,6 @@
                                     <constraint firstAttribute="width" constant="118" id="0cn-JJ-wwj"/>
                                 </constraints>
                                 <state key="normal" title="Submit New Post"/>
-                                <connections>
-                                    <segue destination="RyS-X4-go2" kind="show" id="WrO-sN-GvZ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -281,8 +279,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="f2v-Y4-G1U"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="RyS-X4-go2" kind="show" identifier="Post" id="bmv-uZ-jLG"/>
-                        <segue destination="LMY-uE-Bjm" kind="show" id="7KP-e0-fwt"/>
+                        <segue destination="RyS-X4-go2" kind="show" id="t8O-As-jE3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnF-Dl-izO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,13 +299,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="feo-y7-xZa" kind="show" id="TW3-Xd-pY9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo4-db-Hiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1852" y="-10"/>
+            <point key="canvasLocation" x="-1866" y="684"/>
         </scene>
         <!--Potential Partners-->
         <scene sceneID="eSs-Ep-0ah">
@@ -323,10 +317,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="LMY-uE-Bjm" kind="show" id="HLm-mU-z2L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ee-cK-hGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1852" y="650"/>
+            <point key="canvasLocation" x="-1866" y="-10"/>
         </scene>
         <!--Post Details-->
         <scene sceneID="Lph-Yk-YxA">
@@ -342,7 +339,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="OaN-KQ-SaK" kind="show" id="oUd-Mx-c1o"/>
+                        <segue destination="OaN-KQ-SaK" kind="show" id="q2c-nB-QkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXe-jD-q6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -350,7 +347,4 @@
             <point key="canvasLocation" x="-1119" y="-10"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WrO-sN-GvZ"/>
-    </inferredMetricsTieBreakers>
 </document>

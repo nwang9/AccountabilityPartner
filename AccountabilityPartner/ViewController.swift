@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class ViewController: UIViewController {
-    
+ /*
     //Navbar setup
     let rightButtonItem = UIBarButtonItem.init(
         title: "Sign Out",
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 
     }
     
-  
+  */
 
     
     //Prep for logout
