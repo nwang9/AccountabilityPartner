@@ -197,7 +197,7 @@
                             <constraint firstItem="U7R-f4-4Xv" firstAttribute="top" secondItem="HEF-rW-L7q" secondAttribute="bottom" constant="16" id="xdb-hf-P7i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Find a New Partner!" id="j4a-Is-qng">
+                    <navigationItem key="navigationItem" id="j4a-Is-qng">
                         <barButtonItem key="backBarButtonItem" title="Back" id="6L6-Mq-eBv"/>
                     </navigationItem>
                     <connections>
@@ -222,17 +222,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vx2-OC-mtt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vx2-OC-mtt">
                                 <rect key="frame" x="0.0" y="179" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" id="7yv-55-UEE">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" id="7yv-55-UEE" customClass="PostTableViewCell" customModule="AccountabilityPartner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7yv-55-UEE" id="igu-a8-6j8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrC-Rk-F42">
+                                                    <rect key="frame" x="70" y="43" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-L6-AYb">
+                                                    <rect key="frame" x="203" y="46" width="71" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="Om8-y0-d3j"/>
+                                                        <constraint firstAttribute="width" constant="71" id="Pzl-1L-6EE"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="sendToChatPage:" destination="7yv-55-UEE" eventType="touchUpInside" id="S2y-zQ-HY3"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJb-I8-kne">
+                                                    <rect key="frame" x="164" y="8" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="sendToPostDetails:" destination="7yv-55-UEE" eventType="touchUpInside" id="Ikc-V3-Ykn"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ysp-L6-AYb" firstAttribute="leading" secondItem="xrC-Rk-F42" secondAttribute="trailing" constant="91" id="223-e7-i8V"/>
+                                                <constraint firstItem="fJb-I8-kne" firstAttribute="top" secondItem="igu-a8-6j8" secondAttribute="topMargin" id="UyA-ND-9Bq"/>
+                                                <constraint firstItem="ysp-L6-AYb" firstAttribute="top" secondItem="fJb-I8-kne" secondAttribute="bottom" constant="8" symbolic="YES" id="Y0m-Kx-lfy"/>
+                                                <constraint firstItem="fJb-I8-kne" firstAttribute="centerX" secondItem="igu-a8-6j8" secondAttribute="centerX" id="bhg-vf-krP"/>
+                                                <constraint firstItem="ysp-L6-AYb" firstAttribute="centerY" secondItem="xrC-Rk-F42" secondAttribute="centerY" id="fSr-UI-ehT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ysp-L6-AYb" secondAttribute="trailing" constant="93" id="oMJ-uw-Tyv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postAuthor" destination="ysp-L6-AYb" id="QDh-V0-SrD"/>
+                                            <outlet property="postDate" destination="xrC-Rk-F42" id="b1V-Q0-Zr9"/>
+                                            <outlet property="postTitle" destination="fJb-I8-kne" id="YRz-lB-Pg5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -271,7 +310,7 @@
                             <constraint firstItem="IbG-1y-SSX" firstAttribute="centerX" secondItem="hlt-ky-bab" secondAttribute="centerX" id="rqr-cq-wyG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="All Posts" id="hYh-CE-kB6">
+                    <navigationItem key="navigationItem" id="hYh-CE-kB6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="f2v-Y4-G1U"/>
                     </navigationItem>
                     <connections>
@@ -282,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="-1866.4000000000001" y="-660.71964017991013"/>
         </scene>
-        <!--Partner Chat-->
+        <!--Chat-->
         <scene sceneID="4w5-Oe-vOr">
             <objects>
-                <viewController title="Partner Chat" id="LMY-uE-Bjm" customClass="PartnerChatViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Chat" id="LMY-uE-Bjm" customClass="PartnerChatViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MUJ-wL-pN1"/>
                         <viewControllerLayoutGuide type="bottom" id="TuA-os-OWM"/>
@@ -300,10 +339,10 @@
             </objects>
             <point key="canvasLocation" x="-1866" y="767"/>
         </scene>
-        <!--Potential Partners-->
+        <!--Partners-->
         <scene sceneID="eSs-Ep-0ah">
             <objects>
-                <viewController storyboardIdentifier="myPartners" title="Potential Partners" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OaN-KQ-SaK" customClass="PotentialPartnersViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myPartners" title="Partners" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OaN-KQ-SaK" customClass="PotentialPartnersViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FaC-hZ-4PW"/>
                         <viewControllerLayoutGuide type="bottom" id="GET-lZ-sCO"/>
@@ -312,7 +351,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vMj-Nd-e4L">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vMj-Nd-e4L">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -320,13 +359,53 @@
                                     <constraint firstAttribute="height" constant="603" id="iwS-om-4El"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="matchCell" id="tCS-io-cNZ">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="matchCell" id="tCS-io-cNZ" customClass="MatchesTableViewCell" customModule="AccountabilityPartner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tCS-io-cNZ" id="Mt2-NA-enR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEr-je-AdO">
+                                                    <rect key="frame" x="46" y="29" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avK-r2-d8b">
+                                                    <rect key="frame" x="145" y="8" width="190" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="190" id="SHq-6C-hZu"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-3G-TUs">
+                                                    <rect key="frame" x="271" y="46" width="39" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39" id="2sR-AB-b2f"/>
+                                                        <constraint firstAttribute="height" constant="16" id="K9m-Y2-ttS"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Send"/>
+                                                    <connections>
+                                                        <action selector="sendMessage:" destination="tCS-io-cNZ" eventType="touchUpInside" id="BqL-pm-QDd"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dKk-3G-TUs" secondAttribute="trailing" constant="57" id="1hE-wO-8nK"/>
+                                                <constraint firstItem="vEr-je-AdO" firstAttribute="centerY" secondItem="Mt2-NA-enR" secondAttribute="centerY" id="A40-cW-9af"/>
+                                                <constraint firstItem="avK-r2-d8b" firstAttribute="top" secondItem="Mt2-NA-enR" secondAttribute="topMargin" id="KGj-ne-yUk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="avK-r2-d8b" secondAttribute="trailing" constant="32" id="RRT-Lc-oFo"/>
+                                                <constraint firstItem="dKk-3G-TUs" firstAttribute="top" secondItem="avK-r2-d8b" secondAttribute="bottom" constant="8" symbolic="YES" id="a2n-cZ-sze"/>
+                                                <constraint firstItem="avK-r2-d8b" firstAttribute="leading" secondItem="vEr-je-AdO" secondAttribute="trailing" constant="57" id="d2c-Pq-Wg9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="matchDisplayName" destination="vEr-je-AdO" id="ou2-jR-HLE"/>
+                                            <outlet property="messageTextField" destination="avK-r2-d8b" id="ieq-3U-HCg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -345,10 +424,10 @@
             </objects>
             <point key="canvasLocation" x="-1140" y="60.719640179910051"/>
         </scene>
-        <!--Post Details-->
+        <!--Post Details View Controller-->
         <scene sceneID="Lph-Yk-YxA">
             <objects>
-                <viewController title="Post Details" id="feo-y7-xZa" customClass="PostDetailsViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="feo-y7-xZa" customClass="PostDetailsViewController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Lc-Jm-erO"/>
                         <viewControllerLayoutGuide type="bottom" id="KNw-KH-6IQ"/>

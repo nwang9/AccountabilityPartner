@@ -38,7 +38,7 @@ class NavBarViewController: UIViewController {
         )
         self.navigationItem.setRightBarButton(rightButtonItem, animated: false)
         self.navigationItem.setLeftBarButtonItems([leftButtonItem, middleButtonItem], animated: false)
-        self.navigationItem.title = ""
+        //self.navigationItem.title = ""
         
 
     }
