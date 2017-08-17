@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 import Parse
 
-class PartnerChatViewController: UIViewController, UINavigationBarDelegate {
+class PartnerChatViewController: NavBarViewController {
 }

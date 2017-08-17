@@ -24,7 +24,7 @@
 		03C78D6A1F3D18AB00A28CF2 /* PartnerChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D691F3D18AB00A28CF2 /* PartnerChatViewController.swift */; };
 		03C78D6C1F3D18E100A28CF2 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */; };
 		03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */; };
-		03C78D741F44E8DF00A28CF2 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D731F44E8DF00A28CF2 /* CustomNavController.swift */; };
+		03C78D761F4608FC00A28CF2 /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 		03C78D691F3D18AB00A28CF2 /* PartnerChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartnerChatViewController.swift; path = ../PartnerChatViewController.swift; sourceTree = "<group>"; };
 		03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailsViewController.swift; path = ViewControllers/PostDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
-		03C78D731F44E8DF00A28CF2 /* CustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
+		03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 		038E13CA1F3A39B000C5D854 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				03C78D731F44E8DF00A28CF2 /* CustomNavController.swift */,
+				03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */,
 				038B7FD51F3A924A00D59E61 /* AppDelegate.swift */,
 			);
 			path = Classes;
@@ -215,13 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C78D661F3D187800A28CF2 /* AllPostsViewController.swift in Sources */,
-				03C78D741F44E8DF00A28CF2 /* CustomNavController.swift in Sources */,
 				03C78D6A1F3D18AB00A28CF2 /* PartnerChatViewController.swift in Sources */,
 				038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */,
 				03C78D6C1F3D18E100A28CF2 /* NewPostViewController.swift in Sources */,
 				038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */,
 				03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */,
 				038E13BA1F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld in Sources */,
+				03C78D761F4608FC00A28CF2 /* NavBarViewController.swift in Sources */,
 				03C78D681F3D189400A28CF2 /* PotentialPartnersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

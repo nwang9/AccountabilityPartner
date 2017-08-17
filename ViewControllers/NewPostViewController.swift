@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Parse
 
-class NewPostViewController: UIViewController, UINavigationBarDelegate {
+class NewPostViewController: NavBarViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!

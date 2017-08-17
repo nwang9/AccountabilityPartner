@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Custom Nav Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="v3P-dS-tVc">
             <objects>
-                <navigationController storyboardIdentifier="navController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rgO-aX-7YH" customClass="CustomNavController" customModule="AccountabilityPartner" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rgO-aX-7YH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w4G-FP-fFO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -311,7 +311,31 @@
                     <view key="view" contentMode="scaleToFill" id="gqe-Hw-ixF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vMj-Nd-e4L">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="hPh-dE-Qzk"/>
+                                    <constraint firstAttribute="height" constant="603" id="iwS-om-4El"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="matchCell" id="tCS-io-cNZ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tCS-io-cNZ" id="Mt2-NA-enR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vMj-Nd-e4L" firstAttribute="centerX" secondItem="gqe-Hw-ixF" secondAttribute="centerX" id="05I-Dx-ctH"/>
+                            <constraint firstItem="vMj-Nd-e4L" firstAttribute="centerY" secondItem="gqe-Hw-ixF" secondAttribute="centerY" constant="32" id="Orv-gQ-r01"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="LMY-uE-Bjm" kind="show" id="HLm-mU-z2L"/>
@@ -319,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ee-cK-hGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1140" y="61"/>
+            <point key="canvasLocation" x="-1140" y="60.719640179910051"/>
         </scene>
         <!--Post Details-->
         <scene sceneID="Lph-Yk-YxA">

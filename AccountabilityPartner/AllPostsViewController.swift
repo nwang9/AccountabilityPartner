@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Parse
 
-class AllPostsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationBarDelegate  {
+class AllPostsViewController: NavBarViewController, UITableViewDelegate, UITableViewDataSource  {
     
     @IBAction func goToNewPost(_ sender: Any) {
         let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newPost")
@@ -43,6 +43,5 @@ class AllPostsViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    override func viewDidLoad() {
-    }
+
 }
