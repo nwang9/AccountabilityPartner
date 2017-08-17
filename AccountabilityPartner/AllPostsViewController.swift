@@ -12,6 +12,16 @@ import Parse
 
 class AllPostsViewController: NavBarViewController, UITableViewDelegate, UITableViewDataSource  {
     
+    @IBOutlet weak var postTitle: UIButton!
+    @IBAction func goToPostDetails(_ sender: Any) {
+    }
+    
+    @IBAction func sendMessage(_ sender: Any) {
+    }
+    @IBOutlet weak var postAuthor: UIButton!
+    @IBOutlet weak var postDate: UILabel!
+    
+    
     @IBAction func goToNewPost(_ sender: Any) {
         let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newPost")
         self.navigationController?.pushViewController(vc,animated: true)

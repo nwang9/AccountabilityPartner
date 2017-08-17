@@ -25,6 +25,8 @@
 		03C78D6C1F3D18E100A28CF2 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */; };
 		03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */; };
 		03C78D761F4608FC00A28CF2 /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */; };
+		03C78D781F461B6500A28CF2 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D771F461B6500A28CF2 /* MatchesTableViewCell.swift */; };
+		03C78D7A1F461B9300A28CF2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D791F461B9300A28CF2 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailsViewController.swift; path = ViewControllers/PostDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
+		03C78D771F461B6500A28CF2 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchesTableViewCell.swift; path = ../AccountabilityPartner/MatchesTableViewCell.swift; sourceTree = "<group>"; };
+		03C78D791F461B9300A28CF2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = ../AccountabilityPartner/PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */,
+				03C78D771F461B6500A28CF2 /* MatchesTableViewCell.swift */,
+				03C78D791F461B9300A28CF2 /* PostTableViewCell.swift */,
 				038B7FD51F3A924A00D59E61 /* AppDelegate.swift */,
 			);
 			path = Classes;
@@ -214,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C78D7A1F461B9300A28CF2 /* PostTableViewCell.swift in Sources */,
 				03C78D661F3D187800A28CF2 /* AllPostsViewController.swift in Sources */,
 				03C78D6A1F3D18AB00A28CF2 /* PartnerChatViewController.swift in Sources */,
 				038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */,
@@ -221,6 +228,7 @@
 				038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */,
 				03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */,
 				038E13BA1F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld in Sources */,
+				03C78D781F461B6500A28CF2 /* MatchesTableViewCell.swift in Sources */,
 				03C78D761F4608FC00A28CF2 /* NavBarViewController.swift in Sources */,
 				03C78D681F3D189400A28CF2 /* PotentialPartnersViewController.swift in Sources */,
 			);
