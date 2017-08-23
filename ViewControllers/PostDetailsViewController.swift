@@ -16,8 +16,16 @@ class PostDetailsViewController: NavBarViewController {
     @IBOutlet weak var postAuthor: UILabel!
     @IBOutlet weak var postDescription: UITextView!
     @IBOutlet weak var postTitle: UILabel!
-    
+    @IBOutlet weak var addCommentTextField: UITextField!
     var postId = ""
+    
+    
+    addCommentTextField.addTarget(self, action: "goToNewComment :", forControlEvents: UIControlEvents.TouchDown)
+    
+    func myTargetFunction(textField: UITextField) {
+        // user touch field
+    }
+    
     
     
     func getPostAndUsername() {
@@ -50,7 +58,7 @@ class PostDetailsViewController: NavBarViewController {
         }
 
     func getComments() {
-        let commentQuery
+        let commentQuery = PFQuery(className: "Comment")
     }
 
     @IBAction func sendPrivateMessage(_ sender: Any) {

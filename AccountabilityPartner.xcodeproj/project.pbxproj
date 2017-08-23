@@ -10,6 +10,7 @@
 		031318111F3A946600436B1B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318101F3A946600436B1B /* libsqlite3.tbd */; };
 		031318141F3A94A500436B1B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318131F3A94A500436B1B /* AudioToolbox.framework */; };
 		031318161F3A94F600436B1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318151F3A94F600436B1B /* SystemConfiguration.framework */; };
+		037FF2251F4E3A2D0051315F /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037FF2241F4E3A2D0051315F /* NewCommentViewController.swift */; };
 		038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B7FD51F3A924A00D59E61 /* AppDelegate.swift */; };
 		038B7FD91F3A935E00D59E61 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038B7FD81F3A935E00D59E61 /* CoreData.framework */; };
 		038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E13B31F3A2E7B00C5D854 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		031318101F3A946600436B1B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		031318131F3A94A500436B1B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		031318151F3A94F600436B1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		037FF2241F4E3A2D0051315F /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewCommentViewController.swift; path = ViewControllers/NewCommentViewController.swift; sourceTree = SOURCE_ROOT; };
 		038B7FD51F3A924A00D59E61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		038B7FD81F3A935E00D59E61 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		038E13AE1F3A2E7B00C5D854 /* AccountabilityPartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountabilityPartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				03C78D6B1F3D18E100A28CF2 /* NewPostViewController.swift */,
 				03C78D671F3D189400A28CF2 /* PotentialPartnersViewController.swift */,
 				03C78D6D1F3D193800A28CF2 /* PostDetailsViewController.swift */,
+				037FF2241F4E3A2D0051315F /* NewCommentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				03C78D6A1F3D18AB00A28CF2 /* PartnerChatViewController.swift in Sources */,
 				038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */,
 				03C78D6C1F3D18E100A28CF2 /* NewPostViewController.swift in Sources */,
+				037FF2251F4E3A2D0051315F /* NewCommentViewController.swift in Sources */,
 				038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */,
 				03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */,
 				038E13BA1F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld in Sources */,
