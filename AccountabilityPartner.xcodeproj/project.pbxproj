@@ -28,6 +28,7 @@
 		03C78D761F4608FC00A28CF2 /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */; };
 		03C78D781F461B6500A28CF2 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D771F461B6500A28CF2 /* MatchesTableViewCell.swift */; };
 		03C78D7A1F461B9300A28CF2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C78D791F461B9300A28CF2 /* PostTableViewCell.swift */; };
+		0F8668431F4E579B000178E3 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8668421F4E579B000178E3 /* CommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
 		03C78D771F461B6500A28CF2 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchesTableViewCell.swift; path = ../AccountabilityPartner/MatchesTableViewCell.swift; sourceTree = "<group>"; };
 		03C78D791F461B9300A28CF2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = ../AccountabilityPartner/PostTableViewCell.swift; sourceTree = "<group>"; };
+		0F8668421F4E579B000178E3 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentTableViewCell.swift; path = Classes/CommentTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				03C78D751F4608FC00A28CF2 /* NavBarViewController.swift */,
 				03C78D771F461B6500A28CF2 /* MatchesTableViewCell.swift */,
 				03C78D791F461B9300A28CF2 /* PostTableViewCell.swift */,
+				0F8668421F4E579B000178E3 /* CommentTableViewCell.swift */,
 				038B7FD51F3A924A00D59E61 /* AppDelegate.swift */,
 			);
 			path = Classes;
@@ -231,6 +234,7 @@
 				037FF2251F4E3A2D0051315F /* NewCommentViewController.swift in Sources */,
 				038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */,
 				03C78D6E1F3D193800A28CF2 /* PostDetailsViewController.swift in Sources */,
+				0F8668431F4E579B000178E3 /* CommentTableViewCell.swift in Sources */,
 				038E13BA1F3A2E7B00C5D854 /* AccountabilityPartner.xcdatamodeld in Sources */,
 				03C78D781F461B6500A28CF2 /* MatchesTableViewCell.swift in Sources */,
 				03C78D761F4608FC00A28CF2 /* NavBarViewController.swift in Sources */,
