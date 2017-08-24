@@ -19,11 +19,39 @@ class PostDetailsViewController: NavBarViewController {
     @IBOutlet weak var addCommentTextField: UITextField!
     var postId = ""
     
+    //TableView
     
-    addCommentTextField.addTarget(self, action: "goToNewComment :", forControlEvents: UIControlEvents.TouchDown)
+    @IBOutlet weak var commentDescription: UILabel!
+    @IBOutlet weak var commentAuthor: UIButton!
+    var comments = [PFObject]()
+    @IBAction func sendCommentAuthorMessage(_ sender: Any) {
+        
+    }
     
-    func myTargetFunction(textField: UITextField) {
-        // user touch field
+    //Define rows
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 20
+        
+    }
+    
+    // Create cell
+    public func tableView( _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "postCell") as! PostTableViewCell
+
+        cell.commentDescription.text = postDates[indexPath.row]
+        
+        return cell
+    }
+
+    
+    // Sends you to the new comment Page
+    func goToNewComment() {
+        let vc:NewCommentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "chat") as! NewCommentViewController
+        vc.postId = postId
+        vc.postTitle = self.postTitle.text!
+        self.navigationController?.pushViewController(vc,animated: true)
     }
     
     
@@ -78,5 +106,7 @@ class PostDetailsViewController: NavBarViewController {
     override func viewDidLoad() {
         getPostAndUsername()
         getComments()
+        addCommentTextField.addTarget(self, action: #selector(PostDetailsViewController.goToNewComment), for: UIControlEvents.touchDown)
+
     }
 }
