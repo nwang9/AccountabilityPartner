@@ -11,6 +11,7 @@
 		031318141F3A94A500436B1B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318131F3A94A500436B1B /* AudioToolbox.framework */; };
 		031318161F3A94F600436B1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031318151F3A94F600436B1B /* SystemConfiguration.framework */; };
 		037FF2251F4E3A2D0051315F /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037FF2241F4E3A2D0051315F /* NewCommentViewController.swift */; };
+		037FF2481F55F0520051315F /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037FF2471F55F0520051315F /* PubNub.framework */; };
 		038B7FD61F3A924A00D59E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B7FD51F3A924A00D59E61 /* AppDelegate.swift */; };
 		038B7FD91F3A935E00D59E61 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038B7FD81F3A935E00D59E61 /* CoreData.framework */; };
 		038E13B41F3A2E7B00C5D854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E13B31F3A2E7B00C5D854 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		031318131F3A94A500436B1B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		031318151F3A94F600436B1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		037FF2241F4E3A2D0051315F /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewCommentViewController.swift; path = ViewControllers/NewCommentViewController.swift; sourceTree = SOURCE_ROOT; };
+		037FF2471F55F0520051315F /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PubNub.framework; path = "Pods/../build/Debug-iphoneos/PubNub/PubNub.framework"; sourceTree = SOURCE_ROOT; };
 		038B7FD51F3A924A00D59E61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		038B7FD81F3A935E00D59E61 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		038E13AE1F3A2E7B00C5D854 /* AccountabilityPartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountabilityPartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037FF2481F55F0520051315F /* PubNub.framework in Frameworks */,
 				031318161F3A94F600436B1B /* SystemConfiguration.framework in Frameworks */,
 				031318141F3A94A500436B1B /* AudioToolbox.framework in Frameworks */,
 				031318111F3A946600436B1B /* libsqlite3.tbd in Frameworks */,
@@ -114,6 +117,7 @@
 		038E13C81F3A381D00C5D854 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				037FF2471F55F0520051315F /* PubNub.framework */,
 				031318151F3A94F600436B1B /* SystemConfiguration.framework */,
 				031318131F3A94A500436B1B /* AudioToolbox.framework */,
 				031318101F3A946600436B1B /* libsqlite3.tbd */,
@@ -435,6 +439,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PubNub",
 				);
 				INFOPLIST_FILE = AccountabilityPartner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,6 +458,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PubNub",
 				);
 				INFOPLIST_FILE = AccountabilityPartner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

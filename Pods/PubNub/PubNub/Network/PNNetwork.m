@@ -432,7 +432,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param data    Reference on RAW data received from service.
  @param task    Reference on data task which has been used to communicate with \b PubNub network.
- @param error   Reference on data/request processing error.
+ @param requestError   Reference on data/request processing error.
  @param success Reference on data task success handling block which will be called by network manager.
  @param failure Reference on data task processing failure handling block which will be called by network 
                 manager.

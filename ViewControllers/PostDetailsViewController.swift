@@ -132,7 +132,7 @@ class PostDetailsViewController: NavBarViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         getPostAndUsername()
         getComments()
-        addCommentTextField.addTarget(self, action: Selector(("goToNewComment")), for: UIControlEvents.touchDown)
+        addCommentTextField.addTarget(self, action: #selector(PostDetailsViewController.goToNewComment), for: UIControlEvents.touchDown)
 
     }
 }

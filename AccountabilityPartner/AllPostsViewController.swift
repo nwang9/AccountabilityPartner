@@ -88,7 +88,7 @@ class AllPostsViewController: NavBarViewController, UITableViewDelegate, UITable
                     // Fill Arrays with Data
                     if let postTitle = post["title"] as? String {
                         self.postTitles.append(postTitle)
-                        self.postIds.append(post.objectId!) as? String
+                        self.postIds.append(post.objectId!)
                     }
                     if let postDate = formatter.string(from: post.createdAt!) as? String {
                         self.postDates.append(postDate)
