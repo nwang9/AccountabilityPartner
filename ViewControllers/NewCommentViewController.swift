@@ -58,6 +58,7 @@ class NewCommentViewController: UIViewController {
         self.navigationItem.setRightBarButton(rightButtonItem, animated: false)
         self.navigationItem.setLeftBarButton(leftButtonItem, animated: false)
         self.navigationItem.title = "Add Comment"
+        self.currentTitle.text = postTitle
         
 
     }

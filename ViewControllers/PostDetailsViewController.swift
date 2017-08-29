@@ -21,10 +21,6 @@ class PostDetailsViewController: NavBarViewController, UITableViewDelegate, UITa
     
     //TableView
 
-    
-    func goToNewComment(textField: UITextField) {
-        // user touch field
-=======
     var commentDescriptionsArray = [String]()
     var commentAuthors = [String]()
     var commentDates = [String]()
@@ -48,10 +44,9 @@ class PostDetailsViewController: NavBarViewController, UITableViewDelegate, UITa
         return cell
     }
 
-    
-    // Sends you to the new comment Page
+    //  new comment Page
     func goToNewComment() {
-        let vc:NewCommentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "chat") as! NewCommentViewController
+        let vc:NewCommentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addComment") as! NewCommentViewController
         vc.postId = postId
         vc.postTitle = self.postTitle.text!
         self.navigationController?.pushViewController(vc,animated: true)
@@ -137,11 +132,7 @@ class PostDetailsViewController: NavBarViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         getPostAndUsername()
         getComments()
-<<<<<<< HEAD
         addCommentTextField.addTarget(self, action: Selector(("goToNewComment")), for: UIControlEvents.touchDown)
-=======
-        addCommentTextField.addTarget(self, action: #selector(PostDetailsViewController.goToNewComment), for: UIControlEvents.touchDown)
 
->>>>>>> 74c79df010c3b0235b090799f1d29d81b1fd9ce5
     }
 }
