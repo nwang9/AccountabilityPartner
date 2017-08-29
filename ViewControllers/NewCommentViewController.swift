@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import Parse
 
 class NewCommentViewController: UIViewController {
 
+    @IBOutlet weak var currentTitle: UILabel!
+    @IBOutlet weak var commentText: UITextView!
+    
+    var postTitle = ""
+    var postId = ""
+    
     func goToComments() {
-        
+        let vc:PostDetailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "postDetails") as! PostDetailsViewController
+        self.navigationController?.pushViewController(vc,animated: true)
     }
     
     func submitComment() {
+        let myComment = PFObject(className:"Comment")
+        myComment["description"] = commentText.text
+        myComment["post_id"] = postId
+        myComment["user_id"] = PFUser.current()
+        myComment.saveInBackground()
+        
+        //Go back to Post once comment is saved
+        let vc:PostDetailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "postDetails") as! PostDetailsViewController
+        self.navigationController?.pushViewController(vc,animated: true)
         
     }
 
