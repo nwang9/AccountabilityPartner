@@ -20,9 +20,9 @@ class PostDetailsViewController: NavBarViewController {
     var postId = ""
     
     
-    addCommentTextField.addTarget(self, action: "goToNewComment :", forControlEvents: UIControlEvents.TouchDown)
     
-    func myTargetFunction(textField: UITextField) {
+    
+    func goToNewComment(textField: UITextField) {
         // user touch field
     }
     
@@ -78,5 +78,6 @@ class PostDetailsViewController: NavBarViewController {
     override func viewDidLoad() {
         getPostAndUsername()
         getComments()
+        addCommentTextField.addTarget(self, action: Selector(("goToNewComment")), for: UIControlEvents.touchDown)
     }
 }
