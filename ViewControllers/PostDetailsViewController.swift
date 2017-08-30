@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Parse
+import PubNub
 
 class PostDetailsViewController: NavBarViewController, UITableViewDelegate, UITableViewDataSource   {
     
@@ -116,6 +117,7 @@ class PostDetailsViewController: NavBarViewController, UITableViewDelegate, UITa
     }
 
     @IBAction func sendPrivateMessage(_ sender: Any) {
+        self.client.
         let vc:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "chat")
         self.navigationController?.pushViewController(vc,animated: true)
     }
